@@ -1,11 +1,120 @@
 :root {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   line-height: 1.5;
+  color-scheme: light dark;
+
+  /* Backgrounds */
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #f9fafb;
+  --color-surface-subtle: #f3f4f6;
+
+  /* Borders */
+  --color-border: #e5e7eb;
+  --color-border-subtle: #f3f4f6;
+
+  /* Text */
+  --color-text: #111827;
+  --color-text-secondary: #374151;
+  --color-text-muted: #6b7280;
+  --color-text-disabled: #9ca3af;
+
+  /* Brand / Actions */
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-text: #ffffff;
+
+  /* Semantic */
+  --color-success-bg: #ecfdf5;
+  --color-success-text: #065f46;
+  --color-success-border: #a7f3d0;
+  --color-warning-bg: #fffbeb;
+  --color-warning-text: #92400e;
+  --color-warning-border: #fde68a;
+  --color-info-bg: #eff6ff;
+  --color-info-text: #1e40af;
+  --color-info-border: #bfdbfe;
+  --color-danger: #dc2626;
+  --color-danger-hover: #b91c1c;
+  --color-danger-text: #ffffff;
+
+  /* Nav */
+  --color-nav-border: #e3e3e3;
+  --color-nav-link: #333333;
+  --color-nav-active-bg: #eaeaea;
+  --color-nav-hover-bg: #f0f0f0;
+
+  /* Focus */
+  --color-focus: #2563eb;
+
+  /* Timer (cook mode) */
+  --color-timer-bg: #fff8e1;
+  --color-timer-border: #f1d98a;
+
+  /* Links */
+  --color-link: #1d54a4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* "Late Night Kitchen" — espresso, caramel, saffron */
+
+    /* Backgrounds */
+    --color-bg: #1a0d08;
+    --color-surface: #231208;
+    --color-surface-elevated: #2e180d;
+    --color-surface-subtle: #3a2015;
+
+    /* Borders */
+    --color-border: #4a2e1a;
+    --color-border-subtle: #3a2015;
+
+    /* Text */
+    --color-text: #f5e6d3;
+    --color-text-secondary: #d4b896;
+    --color-text-muted: #9e7a58;
+    --color-text-disabled: #6b4f38;
+
+    /* Brand / Actions — saffron/pumpkin */
+    --color-primary: #e07c2e;
+    --color-primary-hover: #c96618;
+    --color-primary-text: #1a0d08;
+
+    /* Semantic — turmeric, herb, chili */
+    --color-success-bg: #0d2b1a;
+    --color-success-text: #6fcf97;
+    --color-success-border: #1a5c34;
+    --color-warning-bg: #2a1e05;
+    --color-warning-text: #f7c948;
+    --color-warning-border: #6b4a0a;
+    --color-info-bg: #0d1a2e;
+    --color-info-text: #7ab8f5;
+    --color-info-border: #1a3a6b;
+    --color-danger: #e05858;
+    --color-danger-hover: #c94040;
+    --color-danger-text: #1a0d08;
+
+    /* Nav — dark roast */
+    --color-nav-border: #3a2015;
+    --color-nav-link: #d4b896;
+    --color-nav-active-bg: #3a2015;
+    --color-nav-hover-bg: #2e180d;
+
+    /* Focus — warm amber */
+    --color-focus: #e07c2e;
+
+    /* Timer — dark honey */
+    --color-timer-bg: #2a1e05;
+    --color-timer-border: #6b4a0a;
+
+    /* Links — warm caramel */
+    --color-link: #e07c2e;
+  }
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #ffffff;
-  color: #111827;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }

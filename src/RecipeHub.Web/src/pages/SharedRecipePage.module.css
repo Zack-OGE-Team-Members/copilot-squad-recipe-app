@@ -4,13 +4,13 @@
 
 .topBar {
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .brand {
   font-weight: 700;
   font-size: 1.1rem;
-  color: #222;
+  color: var(--color-text);
   text-decoration: none;
 }
 
@@ -28,7 +28,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  color: #555;
+  color: var(--color-text-muted);
   font-size: 0.9rem;
   margin-bottom: 0.75rem;
 }
@@ -55,7 +55,7 @@
 }
 
 .timer {
-  color: #666;
+  color: var(--color-text-muted);
   font-size: 0.85rem;
   margin-left: 0.5rem;
 }
@@ -63,7 +63,7 @@
 .footer {
   margin-top: 2rem;
   padding-top: 1rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--color-border);
   font-size: 0.9rem;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .error {
-  color: #a33;
+  color: var(--color-danger);
 }
 
 .notFound h1 {

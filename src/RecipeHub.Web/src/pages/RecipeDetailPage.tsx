@@ -1,7 +1,13 @@
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Badge, Button, Spinner } from '../components/ui';
 import { ShareButton } from '../components/recipe';
-import { useDeleteRecipe, useRecipe } from '../hooks';
+import {
+  useAddFavorite,
+  useDeleteRecipe,
+  useFavorites,
+  useRecipe,
+  useRemoveFavorite,
+} from '../hooks';
 import styles from './RecipeDetailPage.module.css';
 
 export function RecipeDetailPage() {
@@ -10,6 +16,19 @@ export function RecipeDetailPage() {
   const navigate = useNavigate();
   const { data, isLoading, isError, error } = useRecipe(numericId);
   const deleteMutation = useDeleteRecipe();
+  const { data: favorites } = useFavorites();
+  const addFavorite = useAddFavorite();
+  const removeFavorite = useRemoveFavorite();
+  const isFavorited = favorites?.some((f) => f.recipeId === numericId) ?? false;
+  const favoriteEntry = favorites?.find((f) => f.recipeId === numericId);
+
+  const handleFavoriteToggle = () => {
+    if (isFavorited && favoriteEntry) {
+      removeFavorite.mutate(favoriteEntry.recipeId);
+    } else if (numericId !== undefined) {
+      addFavorite.mutate({ recipeId: numericId });
+    }
+  };
 
   if (isLoading) {
     return <Spinner label="Loading recipe…" />;
@@ -79,6 +98,13 @@ export function RecipeDetailPage() {
           <Button variant="secondary">🍳 Cook Mode</Button>
         </Link>
         <ShareButton recipeId={numericId} />
+        <Button
+          variant="secondary"
+          onClick={handleFavoriteToggle}
+          loading={addFavorite.isPending || removeFavorite.isPending}
+        >
+          {isFavorited ? '❤️ Favorited' : '🤍 Favorite'}
+        </Button>
         <Button
           variant="danger"
           onClick={handleDelete}

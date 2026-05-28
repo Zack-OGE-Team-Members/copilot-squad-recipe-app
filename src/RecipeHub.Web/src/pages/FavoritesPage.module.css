@@ -1,14 +1,14 @@
 .wrapper {
   padding: 2rem 1rem;
   text-align: center;
-  color: #444;
+  color: var(--color-text-secondary);
 }
 
 .wrapper h1 {
   margin-bottom: 0.5rem;
 }
 
-.note {
-  color: #666;
+.empty {
+  color: var(--color-text-muted);
   margin-bottom: 1.5rem;
 }

@@ -185,7 +185,7 @@ export function RecipeEditPage() {
 
   return (
     <div>
-      <h1>{isEdit ? 'Edit Recipe' : 'New Recipe'}</h1>
+      <h1>{isEdit ? '✏️ Edit Recipe' : '🆕 New Recipe'}</h1>
       <form className={styles.form} onSubmit={handleSubmit} noValidate>
         <div className={styles.field}>
           <label htmlFor="title">Title *</label>
@@ -368,7 +368,7 @@ export function RecipeEditPage() {
           </div>
           <div>
             <Button type="button" variant="ghost" size="sm" onClick={addStep}>
-              + Add step
+              ➕ Add step
             </Button>
           </div>
           {validationErrors.steps ? (
@@ -382,14 +382,14 @@ export function RecipeEditPage() {
 
         <div className={styles.actions}>
           <Button type="submit" variant="primary" loading={submitting}>
-            {isEdit ? 'Save Changes' : 'Create Recipe'}
+            {isEdit ? '💾 Save Changes' : '🍽️ Create Recipe'}
           </Button>
           <Button
             type="button"
             variant="ghost"
             onClick={() => navigate('/recipes')}
           >
-            Cancel
+            ✖️ Cancel
           </Button>
         </div>
       </form>

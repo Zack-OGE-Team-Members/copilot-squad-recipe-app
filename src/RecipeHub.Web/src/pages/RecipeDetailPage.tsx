@@ -58,13 +58,13 @@ export function RecipeDetailPage() {
       ) : null}
 
       <section>
-        <h2>Steps</h2>
+        <h2>👨‍🍳 Steps</h2>
         <ol className={styles.steps}>
           {sortedSteps.map((s) => (
             <li key={s.stepNumber} className={styles.step}>
               {s.instruction}
               {s.timerMinutes != null ? (
-                <span className={styles.timer}>({s.timerMinutes} min)</span>
+                <span className={styles.timer}>⏱️ {s.timerMinutes} min</span>
               ) : null}
             </li>
           ))}
@@ -73,10 +73,10 @@ export function RecipeDetailPage() {
 
       <div className={styles.actions}>
         <Link to={`/recipes/${numericId}/edit`}>
-          <Button variant="primary">Edit</Button>
+          <Button variant="primary">✏️ Edit</Button>
         </Link>
         <Link to={`/recipes/${numericId}/cook`}>
-          <Button variant="secondary">Cook Mode</Button>
+          <Button variant="secondary">🍳 Cook Mode</Button>
         </Link>
         <ShareButton recipeId={numericId} />
         <Button
@@ -84,7 +84,7 @@ export function RecipeDetailPage() {
           onClick={handleDelete}
           loading={deleteMutation.isPending}
         >
-          Delete
+          🗑️ Delete
         </Button>
       </div>
     </article>

@@ -19,7 +19,7 @@ function StepTimer({ minutes }: { minutes: number }) {
       <div className={styles.timerControls}>
         {isRunning ? (
           <Button size="sm" variant="secondary" onClick={pause}>
-            Pause
+            ⏸️ Pause
           </Button>
         ) : (
           <Button
@@ -28,11 +28,11 @@ function StepTimer({ minutes }: { minutes: number }) {
             onClick={start}
             disabled={remainingSeconds === 0}
           >
-            Start
+            ▶️ Start
           </Button>
         )}
         <Button size="sm" variant="ghost" onClick={reset}>
-          Reset
+          🔄 Reset
         </Button>
       </div>
     </div>
@@ -71,7 +71,7 @@ export function CookModePage() {
           ← Back to recipe
         </Link>
         <h1 className={styles.heading}>
-          Step {currentStep} of {step.totalSteps}
+          🧑‍🍳 Step {currentStep} of {step.totalSteps}
         </h1>
       </header>
 
@@ -85,10 +85,10 @@ export function CookModePage() {
 
       <nav className={styles.controls} aria-label="Step navigation">
         <Button variant="secondary" onClick={prev} disabled={!canPrev}>
-          Previous
+          ⬅️ Previous
         </Button>
         <Button variant="primary" onClick={next} disabled={!canNext}>
-          Next
+          Next ➡️
         </Button>
       </nav>
     </article>

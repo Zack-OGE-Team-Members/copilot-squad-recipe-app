@@ -49,11 +49,11 @@ export function ShareButton({ recipeId }: ShareButtonProps) {
         onClick={() => mutation.mutate()}
         loading={mutation.isPending}
       >
-        Share
+        📤 Share
       </Button>
       {copied ? (
         <span className={styles.feedback} role="status">
-          Copied!
+          ✅ Copied!
         </span>
       ) : null}
       {mutation.isError ? (

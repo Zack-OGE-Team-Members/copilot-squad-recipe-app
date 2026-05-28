@@ -1,6 +1,8 @@
 import type {
+  AddFavoriteRequest,
   CookModeDto,
   CreateRecipeRequest,
+  FavoriteDto,
   Recipe,
   RecipeDetail,
   ShareDto,
@@ -120,6 +122,14 @@ export const apiClient = {
 
   getSharedRecipe: (token: string): Promise<RecipeDetail> =>
     request<RecipeDetail>(`/api/shared/${encodeURIComponent(token)}`),
+
+  listFavorites: (): Promise<FavoriteDto[]> => request<FavoriteDto[]>('/api/favorites'),
+
+  addFavorite: (req: AddFavoriteRequest): Promise<FavoriteDto> =>
+    request<FavoriteDto>('/api/favorites', jsonInit('POST', req)),
+
+  removeFavorite: (recipeId: number): Promise<void> =>
+    request<void>(`/api/favorites/${recipeId}`, { method: 'DELETE', parseJson: false }),
 };
 
 export type ApiClient = typeof apiClient;

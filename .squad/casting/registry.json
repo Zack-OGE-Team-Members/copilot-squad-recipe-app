@@ -1,0 +1,60 @@
+{
+  "agents": {
+    "monica": {
+      "persistent_name": "Monica",
+      "role": "Lead",
+      "universe": "Silicon Valley",
+      "created_at": "2026-05-28T13:01:15.437-04:00",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "dinesh": {
+      "persistent_name": "Dinesh",
+      "role": "Frontend Dev",
+      "universe": "Silicon Valley",
+      "created_at": "2026-05-28T13:01:15.437-04:00",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "gilfoyle": {
+      "persistent_name": "Gilfoyle",
+      "role": "Backend Dev",
+      "universe": "Silicon Valley",
+      "created_at": "2026-05-28T13:01:15.437-04:00",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "jared": {
+      "persistent_name": "Jared",
+      "role": "Tester",
+      "universe": "Silicon Valley",
+      "created_at": "2026-05-28T13:01:15.437-04:00",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "richard": {
+      "persistent_name": "Richard",
+      "role": "Platform Dev",
+      "universe": "Silicon Valley",
+      "created_at": "2026-05-28T13:01:15.437-04:00",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "scribe": {
+      "persistent_name": "Scribe",
+      "role": "Session Logger",
+      "universe": "system",
+      "created_at": "2026-05-28T13:01:15.437-04:00",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "ralph": {
+      "persistent_name": "Ralph",
+      "role": "Work Monitor",
+      "universe": "system",
+      "created_at": "2026-05-28T13:01:15.437-04:00",
+      "legacy_named": false,
+      "status": "active"
+    }
+  }
+}

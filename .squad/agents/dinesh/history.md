@@ -25,3 +25,7 @@ Initial team setup complete. Dinesh owns React, TypeScript, Vite, TanStack Query
 - Dark mode palette: espresso bg (#1a0d08), cream text (#f5e6d3), saffron accent (#e07c2e)
 - WCAG AA confirmed in both modes
 - Pattern: always use CSS custom properties for colors; never hardcode hex in component CSS
+
+### 2026-05-28: Favorites restore
+- Restoring favorites from stash requires the whole frontend chain, not just the pages: `FavoriteDto`/`AddFavoriteRequest`, `apiClient` favorite methods, `favoriteKeys`, hook barrel exports, and page UI all need to stay aligned.
+- When merging favorites logic into `RecipeDetailPage`, preserve the dark mode food emoji labels already on main and only add the toggle behavior.

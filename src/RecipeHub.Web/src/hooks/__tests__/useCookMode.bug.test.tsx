@@ -56,7 +56,7 @@ describe('useCookMode — BUG-001 planted-bug specs', () => {
     vi.restoreAllMocks();
   });
 
-  it.skip('BUG-001: opens Cook Mode on step 1 and shows the FIRST instruction', async () => {
+  it('BUG-001: opens Cook Mode on step 1 and shows the FIRST instruction', async () => {
     const { result } = renderHook(() => useCookMode(1), { wrapper: wrapper() });
 
     await waitFor(() => {
@@ -68,7 +68,7 @@ describe('useCookMode — BUG-001 planted-bug specs', () => {
     expect(result.current.step?.instruction).toBe('Preheat oven');
   });
 
-  it.skip('BUG-001: Next advances from step 1 to step 2 with the second instruction', async () => {
+  it('BUG-001: Next advances from step 1 to step 2 with the second instruction', async () => {
     const { result } = renderHook(() => useCookMode(1), { wrapper: wrapper() });
 
     await waitFor(() => expect(result.current.step?.stepNumber).toBe(1));

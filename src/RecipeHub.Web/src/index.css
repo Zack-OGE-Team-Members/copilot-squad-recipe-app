@@ -37,6 +37,8 @@
   --color-danger: #dc2626;
   --color-danger-hover: #b91c1c;
   --color-danger-text: #ffffff;
+  --color-danger-bg: #fdecec;
+  --color-danger-border-subtle: #f5c0c0;
 
   /* Nav */
   --color-nav-border: #e3e3e3;
@@ -93,6 +95,8 @@
     --color-danger: #e05858;
     --color-danger-hover: #c94040;
     --color-danger-text: #1a0d08;
+    --color-danger-bg: #2a1010;
+    --color-danger-border-subtle: #6b2020;
 
     /* Nav — dark roast */
     --color-nav-border: #3a2015;

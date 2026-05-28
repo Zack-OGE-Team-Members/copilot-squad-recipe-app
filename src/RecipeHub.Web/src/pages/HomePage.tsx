@@ -12,26 +12,26 @@ export function HomePage() {
   return (
     <div>
       <section className={styles.hero}>
-        <h1>RecipeHub</h1>
+        <h1>🍴 RecipeHub</h1>
         <p className={styles.tagline}>
           Discover, create, and cook your favorite recipes.
         </p>
         <div className={styles.cta}>
           <Link to="/recipes">
             <Button variant="primary" size="lg">
-              Browse Recipes
+              🥘 Browse Recipes
             </Button>
           </Link>
           <Link to="/recipes/new">
             <Button variant="ghost" size="lg">
-              Add Recipe
+              ✍️ Add Recipe
             </Button>
           </Link>
         </div>
       </section>
 
       <section className={styles.featured}>
-        <h2>Featured</h2>
+        <h2>⭐ Featured</h2>
         {isLoading ? (
           <Spinner label="Loading featured recipes…" />
         ) : featured.length === 0 ? (

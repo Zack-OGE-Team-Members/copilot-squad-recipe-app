@@ -30,16 +30,16 @@ function App() {
     <div className={styles.app}>
       <nav className={styles.nav}>
         <NavLink to="/" className={styles.brand}>
-          RecipeHub
+          🍴 RecipeHub
         </NavLink>
         <NavLink to="/" end className={navLinkClass}>
-          Home
+          🏠 Home
         </NavLink>
         <NavLink to="/recipes" className={navLinkClass}>
-          Recipes
+          📋 Recipes
         </NavLink>
         <NavLink to="/favorites" className={navLinkClass}>
-          Favorites
+          ❤️ Favorites
         </NavLink>
       </nav>
       <main>

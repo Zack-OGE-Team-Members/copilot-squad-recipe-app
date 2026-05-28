@@ -21,7 +21,7 @@ export function RecipeListPage() {
   return (
     <div>
       <div className={styles.header}>
-        <h1>Recipes</h1>
+        <h1>📋 Recipes</h1>
         <SearchBar value={query} onChange={setQuery} />
       </div>
       <FilterPanel selectedTag={tag} onTagChange={setTag} />

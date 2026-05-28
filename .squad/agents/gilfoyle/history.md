@@ -10,6 +10,13 @@
 
 Initial team setup complete. Gilfoyle owns Minimal API endpoints, EF Core persistence, SQLite behavior, DTOs, and backend contracts.
 
+### 2026-05-28T15:27:36.852-04:00 — Favorites backend restore
+
+Restored the real favorites backend after a regression back to 501 stubs:
+- Replaced stubbed `FavoriteEndpoints` handlers with real EF Core GET/POST/DELETE behavior for the guest user flow.
+- Kept the existing `FavoriteDto` / `AddFavoriteRequest` contract in use and exposed `RecipeEndpoints.ToDto(Recipe)` as a public static helper so favorites can reuse the standard recipe summary mapping.
+- Verified the exact requested API build command succeeds after clearing a transient local process/build-artifact issue; API tests also pass locally (9 passed, 9 skipped).
+
 ### 2026-05-28 — Favorites backend implementation
 
 Implemented the full favorites feature backend (Challenge 02):

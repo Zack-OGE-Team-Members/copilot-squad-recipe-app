@@ -27,7 +27,7 @@ public static class RecipeEndpoints
             .OrderBy(r => r.Id)
             .ToListAsync(ct);
 
-        var dtos = recipes.Select(ToSummaryDto).ToArray();
+        var dtos = recipes.Select(ToDto).ToArray();
         return Results.Ok(dtos);
     }
 
@@ -198,7 +198,7 @@ public static class RecipeEndpoints
         => Enum.TryParse(value, ignoreCase: true, out difficulty)
            && Enum.IsDefined(difficulty);
 
-    private static RecipeDto ToSummaryDto(Recipe r) => new(
+    public static RecipeDto ToDto(Recipe r) => new(
         r.Id,
         r.Title,
         r.Description,

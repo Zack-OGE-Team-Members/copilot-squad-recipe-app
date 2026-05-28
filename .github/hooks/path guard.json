@@ -1,0 +1,23 @@
+{
+	"version": 1,
+	"hooks": {
+		"PreToolUse": [
+			{
+				"type": "command",
+				"bash": "bash .github/hooks/scripts/path-guard.sh",
+				"powershell": "powershell -ExecutionPolicy Bypass -File .github\\hooks\\scripts\\path-guard.ps1",
+				"cwd": ".",
+				"timeoutSec": 30
+			}
+		],
+		"SubagentStop": [
+			{
+				"type": "command",
+				"bash": "bash .github/hooks/scripts/lint-check.sh",
+				"powershell": "powershell -ExecutionPolicy Bypass -File .github\\hooks\\scripts\\lint-check.ps1",
+				"cwd": ".",
+				"timeoutSec": 120
+			}
+		]
+	}
+}
